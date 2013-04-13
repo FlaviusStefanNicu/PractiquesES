@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="Supermercat" size="982,459" id="uab.es.practiques" metadata="uml2-1.0" initialized="true" tag="1000" key="32303037303533312D31303030205072616374697175657345532F6164726961">
+  <children xsi:type="editmodel:ClassEditModel" name="Producto" location="585,20" size="227,94" id="uab.es.practiques/Producto" runTimeClassModel="precio,Caracteristicas,Nombre">
+    <children xsi:type="editmodel:CompartmentEditModel" size="204,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="Caracteristicas" id="uab.es.practiques/Producto#Caracteristicas"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="Nombre" id="uab.es.practiques/Producto#Nombre"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="precio" id="uab.es.practiques/Producto#precio"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Factura" location="590,113" size="217,112" id="uab.es.practiques/Factura" runTimeClassModel="precioTotal,Codigo,fecha,Nombre,productos">
+    <children xsi:type="editmodel:CompartmentEditModel" size="194,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="Codigo" id="uab.es.practiques/Factura#Codigo"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fecha" id="uab.es.practiques/Factura#fecha"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="precioTotal" id="uab.es.practiques/Factura#precioTotal"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="productos" id="uab.es.practiques/Factura#productos"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:PackageEditModel" name="uab.es.practiques.actores" location="20,20" size="516,361" id="uab.es.practiques.actores">
+    <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@children.1/@sourceConnections.0 //@children.2/@children.2/@sourceConnections.0" name="User" location="125,39" size="147,86" id="uab.es.practiques.actores/User" runTimeClassModel="Login(),ConsultaFactures(Luab.es.practiques.actores.User;)">
+      <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+      <children xsi:type="editmodel:CompartmentEditModel" size="124,36">
+        <children xsi:type="editmodel:MethodEditModel" name="ConsultaFactures" id="uab.es.practiques.actores/User#ConsultaFactures(Luab.es.practiques.actores.User;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="Login" id="uab.es.practiques.actores/User#Login()"/>
+      </children>
+      <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+      <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+    </children>
+    <children xsi:type="editmodel:ClassEditModel" name="Cajero" location="11,174" size="185,104" id="uab.es.practiques.actores/Cajero" runTimeClassModel="leerProducto(Ljava.lang.String;),Login(),generarFactura(),lista">
+      <children xsi:type="editmodel:CompartmentEditModel" size="162,18">
+        <children xsi:type="editmodel:AttributeEditModel" name="lista" id="uab.es.practiques.actores/Cajero#lista"/>
+      </children>
+      <children xsi:type="editmodel:CompartmentEditModel" size="113,36">
+        <children xsi:type="editmodel:MethodEditModel" name="leerProducto" id="uab.es.practiques.actores/Cajero#leerProducto(Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="generarFactura" id="uab.es.practiques.actores/Cajero#generarFactura()"/>
+      </children>
+      <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+      <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="uab.es.practiques.actores/User&lt;-uab.es.practiques.actores/Cajero" source="//@children.2/@children.1" target="//@children.2/@children.0" targetEnd="//@children.2/@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.2/@children.1/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:AssociationEndEditModel" location="149,0" attachSource="true"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="35,86"/>
+      </sourceConnections>
+      <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+    </children>
+    <children xsi:type="editmodel:ClassEditModel" name="Cliente" location="224,185" size="233,158" id="uab.es.practiques.actores/Cliente" runTimeClassModel="eliminarProducto(Luab.es.practiques.Producto;),ConsultarCatalogo(),Login(),CarroCompra,AnyadirProducto(Luab.es.practiques.Producto;),CompraOnline(),MisFacturas()">
+      <children xsi:type="editmodel:CompartmentEditModel" size="210,18">
+        <children xsi:type="editmodel:AttributeEditModel" name="CarroCompra" id="uab.es.practiques.actores/Cliente#CarroCompra"/>
+      </children>
+      <children xsi:type="editmodel:CompartmentEditModel" size="131,90">
+        <children xsi:type="editmodel:MethodEditModel" name="CompraOnline" id="uab.es.practiques.actores/Cliente#CompraOnline()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="ConsultarCatalogo" id="uab.es.practiques.actores/Cliente#ConsultarCatalogo()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="AnyadirProducto" id="uab.es.practiques.actores/Cliente#AnyadirProducto(Luab.es.practiques.Producto;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="MisFacturas" id="uab.es.practiques.actores/Cliente#MisFacturas()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="eliminarProducto" id="uab.es.practiques.actores/Cliente#eliminarProducto(Luab.es.practiques.Producto;)"/>
+      </children>
+      <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+      <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="uab.es.practiques.actores/User&lt;-uab.es.practiques.actores/Cliente" source="//@children.2/@children.2" target="//@children.2/@children.0" targetEnd="//@children.2/@children.2/@sourceConnections.0/@children.1" sourceEnd="//@children.2/@children.2/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:AssociationEndEditModel" location="23,0" attachSource="true"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="122,86"/>
+      </sourceConnections>
+      <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+    </children>
+    <packagePreferences xsi:type="editmodel:UMLClassDiagramPackagePreference"/>
+  </children>
+  <children xsi:type="editmodel:NotepadEditModel" location="672,330" size="326,75" fontInfo="Sans-8-0" note="encapuslar en mes classes les funcionalitats comuines&#xA;fent aixi un sistema com el de server client.&#xA;&#xA;&#xA;separa"/>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1;Product=eUML2" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>
