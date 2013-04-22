@@ -29,13 +29,13 @@ public class LiniaCompra {
 
 	public void setProducte(Producte producte) {
 	}
-/**
+
 	public Compra getCompra() {
 		return null;
 	}
 
 	public void setCompra(Compra compra) {
-	}**/
+	}
 
 	public int getUnitats() {
 		return 0;

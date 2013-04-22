@@ -9,17 +9,18 @@ import uab.es.practiques.Producto;
 
 public class Cajero extends User {
 
+	
+	public interface eventFinCarrito {
+
+	}
+
+
+
 	@Override
 	public boolean Login() {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
-		
-		/**
-		 */
-		public void leerProducto(String codigo){
-		}
 
 
 		/**
@@ -48,13 +49,36 @@ public class Cajero extends User {
 		}
 
 
-			
-			/**
-			 */
-			public Factura generarFactura(){
-				return null;
-			}
+		/** 
+		 * @uml.property name="nom"
+		 */
+		public String nom;
 
+
+		/**
+		 * @uml.property  name="carrec"
+		 */
+		private String carrec;
+
+
+		/**
+		 * Getter of the property <tt>carrec</tt>
+		 * @return  Returns the carrec.
+		 * @uml.property  name="carrec"
+		 */
+		public String getCarrec() {
+			return carrec;
+		}
+
+
+		/**
+		 * Setter of the property <tt>carrec</tt>
+		 * @param carrec  The carrec to set.
+		 * @uml.property  name="carrec"
+		 */
+		public void setCarrec(String carrec) {
+			this.carrec = carrec;
+		}
 
 
 }
