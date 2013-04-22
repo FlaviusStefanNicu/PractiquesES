@@ -117,24 +117,26 @@ public class main {
 			System.out.println("Dades incorrectes \n");
 			
 	}
-	
-	/**
-	 * @param args
-	 * @throws IOException 
-	 */	
-	public static void main(String[] args){
-		// TODO Auto-generated method stub
+	private static void PrintMenu(){
 		System.out.println("Discon Market \n");
 		System.out.println(" ");
 		System.out.println("Opcio: \n");
 		System.out.println("1- Consultar cataleg \n");
-		System.out.println("2- Registrar client \n");
+		System.out.println("2- Identificar client \n");
 		System.out.println("3- Afegir producte al cistell \n");
 		System.out.println("4- Finalitzar compra \n");
 		System.out.println("5- Mostrar stock de productes \n");
 		System.out.println("6- Desconnectar client \n");
 		System.out.println("7- Sortir \n");
 		
+	}
+	/**
+	 * @param args
+	 * @throws IOException 
+	 */	
+	public static void main(String[] args){
+		// TODO Auto-generated method stub
+		PrintMenu();
 		//char inOpcio = System.in.read();//Integer.parseInt(System.in.toString());
 		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
 		gestion = new GestionarCompres();
@@ -166,6 +168,7 @@ public class main {
 					System.out.println("Opcio no valida");
 			}	
 			System.out.println("--------------------------------------------------------");
+			PrintMenu();
 		}
 	}
 }

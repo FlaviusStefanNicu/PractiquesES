@@ -29,7 +29,8 @@ public class Cataleg {
 		FileReader fr;
 		BufferedReader ficheroRegistro;
 		try {
-			fr = new FileReader (new File(StorageFilename()));
+			String ruta = StorageFilename();
+			fr = new FileReader (new File(ruta));
 			ficheroRegistro = new BufferedReader(fr);
 			String sCadena;
 			while ((sCadena = ficheroRegistro.readLine())!=null) {
@@ -174,6 +175,6 @@ public class Cataleg {
 	}
 
 	protected String StorageFilename(){
-		return "productes.txt";
+		return "/home/adria/Escritorio/Practiques ES GIT/PractiquesES/ES_2013_PracticaCT/src/org/uab/etse/es/ES00/productes.txt";
 	}
 }

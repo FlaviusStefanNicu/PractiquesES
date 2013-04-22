@@ -96,7 +96,7 @@ public class Compra {
 	}
 	public boolean AfegirProducteCarro(String idLineaCompra, int unitats){			
 		LiniaCompra auxLinia = new LiniaCompra(unitats, idLineaCompra);
-		if (auxLinia.getProducte().getUnitats()>unitats){ //REVISARR!!!
+		if (auxLinia.getProducte().getUnitats() >= unitats){ //REVISARR!!!
 			addLiniaCompra(auxLinia);	
 			return true;
 		}else

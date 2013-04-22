@@ -15,21 +15,27 @@ import java.util.Iterator;
 
 
 public class LiniaCompra {
+	private int unitat;
+	private String IDLinea;
 
-
+	public LiniaCompra(int unitats, String idLineaCompra) {
+		super();
+		this.unitat = unitats;
+		this.IDLinea = idLineaCompra;
+	}
 	public Producte getProducte() {
 		return null;
 	}
 
 	public void setProducte(Producte producte) {
 	}
-
+/**
 	public Compra getCompra() {
 		return null;
 	}
 
 	public void setCompra(Compra compra) {
-	}
+	}**/
 
 	public int getUnitats() {
 		return 0;
@@ -40,21 +46,14 @@ public class LiniaCompra {
 	}
 			
 	public String getIdLineaCompra() {
-		return "not implemented";
+		return this.IDLinea;
 	}
 
 	public void setIdLineaCompra(String idLineaCompra) {
-	
+		this.IDLinea = idLineaCompra;
 	}
 
-	public LiniaCompra(int unitats, String idLineaCompra) {
-		super();
-	}
 	
-	public LiniaCompra() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 
 	public float GetPreu(){
 		return 0;

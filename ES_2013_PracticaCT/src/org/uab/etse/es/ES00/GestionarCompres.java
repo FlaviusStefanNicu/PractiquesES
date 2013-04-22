@@ -84,7 +84,7 @@ public class GestionarCompres {
 	}
 
 	private void ReadClientFromTxt(){
-		String nomRegistro = "clients.txt";
+		String nomRegistro = "/home/adria/Escritorio/Practiques ES GIT/PractiquesES/ES_2013_PracticaCT/src/org/uab/etse/es/ES00/clients.txt";
 		FileReader fr;
 		BufferedReader ficheroRegistro;
 		try {
