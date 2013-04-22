@@ -96,7 +96,7 @@ public class Compra {
 	}
 	public boolean AfegirProducteCarro(String idLineaCompra, int unitats){			
 		LiniaCompra auxLinia = new LiniaCompra(unitats, idLineaCompra);
-		if (auxLinia.getProducte().getUnitats() >= unitats){ //REVISARR!!!
+		if (auxLinia.getProducte().getUnitats() >= unitats){ //REVISARR!!!falta implementar els metodes
 			addLiniaCompra(auxLinia);	
 			return true;
 		}else
@@ -113,7 +113,7 @@ public class Compra {
 
 	private void RegistrarLiniaCompraTxt( String IdProd, String NomProd, int LiniaUnitats, float liniaPreu){
 		// Registrar compra
-		String nomRegistro = "registro.txt";
+		String nomRegistro = "/home/adria/Escritorio/Practiques ES GIT/PractiquesES/ES_2013_PracticaCT/src/org/uab/etse/es/ES00/registro.txt";
 
 		FileWriter fr;
 		BufferedWriter ficheroRegistro;

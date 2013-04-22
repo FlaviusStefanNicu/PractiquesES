@@ -17,6 +17,8 @@ import java.util.Iterator;
 public class LiniaCompra {
 	private int unitat;
 	private String IDLinea;
+	private Compra compra;
+	private Producte producte;
 
 	public LiniaCompra(int unitats, String idLineaCompra) {
 		super();
@@ -24,25 +26,27 @@ public class LiniaCompra {
 		this.IDLinea = idLineaCompra;
 	}
 	public Producte getProducte() {
-		return null;
+		return this.producte;
 	}
 
 	public void setProducte(Producte producte) {
+		this.producte = producte;
 	}
 
 	public Compra getCompra() {
-		return null;
+		return compra;
 	}
 
 	public void setCompra(Compra compra) {
+		this.compra = compra;
 	}
 
 	public int getUnitats() {
-		return 0;
+		return this.unitat;
 	}
 
 	public void setUnitats(int unitats) {
-		//this.unitats = unitats;
+		this.unitat = unitats;
 	}
 			
 	public String getIdLineaCompra() {
