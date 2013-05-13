@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Producte {
 
@@ -128,7 +129,7 @@ public class Producte {
 	}
 
 	private void UpdateProdTxt(){
-		String nomRegistro = "productes.txt";
+		String nomRegistro = Constantes.RutaProductes;
 		FileReader fr;
 		BufferedReader ficheroRegistro;
 		FileWriter fr1;
@@ -148,28 +149,43 @@ public class Producte {
 				pos++;					
 			} 
 
+			
+			
+			
+			//TODO  arreglar
+			
+			
+			
+			//ArrayList<Producte> list = (ArrayList<Producte>)main.gestion.getCataleg().getProducte();
+			
 			//writing
+
 			fr1 = new FileWriter(new File(nomRegistro));// for writing
 			ficheroRegistro1 = new BufferedWriter(fr1);
 			for (int i=0; i<pos;i++){
-				if (!getIdProducte().equals(IdProdStr(prodStr[i]))){
+				String IDprod = getIdProducte();
+				String idstr = IdProdStr(prodStr[i]);
+				if (!IDprod.equals(idstr)){
 					ficheroRegistro1.append(prodStr[i]);
 					ficheroRegistro1.newLine();
-				}
+				}				
 			}
-			ficheroRegistro1.append(getNombre().toString() + "-" + getIdProducte().toString()+ "-" + getUnitats() + "-" + getCost() + "-" + getStockOptim() + "-" + getStockMinim() + "-" + getDescripcio().toString());
-
+			ficheroRegistro1.append( getIdProducte().toString()+ "-" +getNombre().toString() + "-" +getCost()  + "-" + getUnitats() + "-" + getStockOptim() + "-" + getStockMinim() + "-" + getDescripcio().toString());
+			
+			//ficheroRegistro1.append( getIdProducte().toString()+ "-" +getNombre().toString() + "-" +getCost()  + "-" + getUnitats() + "-" + getStockOptim() + "-" + getStockMinim() + "-" + getDescripcio().toString());
+			//ficheroRegistro1.newLine();
+			
 			ficheroRegistro.close();
 			ficheroRegistro1.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			// 
 			e.printStackTrace();
 		}
 	}
 
 	private String IdProdStr(String sCadena){
 		String[] ProdDades = sCadena.split("-");
-		return ProdDades[1];
+		return ProdDades[0];
 	}
 
 }

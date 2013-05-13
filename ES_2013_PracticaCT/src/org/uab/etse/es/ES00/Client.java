@@ -23,6 +23,13 @@ public class Client {
 	}
 
 	private String dni="";
+	private String compteBancari="";
+	private String password="";
+	private Collection<Compra> compra;
+	private String idClient="";
+	private String telefon="";
+	private String cognom="";
+	private String nom="";
 
 	public String getDNI() {
 		return dni;
@@ -32,7 +39,6 @@ public class Client {
 		this.dni = dni;
 	}
 
-	private String nom="";
 
 	public String getNom() {
 		return nom;
@@ -42,7 +48,6 @@ public class Client {
 		this.nom = nom;
 	}
 
-	private String cognom="";
 
 	public String getCognom() {
 		return cognom;
@@ -52,7 +57,6 @@ public class Client {
 		this.cognom = cognom;
 	}
 
-	private String compteBancari="";
 
 	public String getCompteBancari() {
 		return compteBancari;
@@ -62,7 +66,6 @@ public class Client {
 		this.compteBancari = compteBancari;
 	}
 
-	private String telefon="";
 
 	public String getTelefon() {
 		return telefon;
@@ -72,7 +75,6 @@ public class Client {
 		this.telefon = telefon;
 	}
 
-	private String idClient="";
 
 	public String getIdClient() {
 		return idClient;
@@ -82,7 +84,6 @@ public class Client {
 		this.idClient = idClient;
 	}
 
-	private String password="";
 
 	public String getPassword() {
 		return password;
@@ -96,7 +97,6 @@ public class Client {
 		return ((this.idClient.equals(idClient))&&(this.password.equals(password))); 
 	}
 
-	private Collection<Compra> compra;
 
 	public Collection<Compra> getCompra() {
 		return compra;

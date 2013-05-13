@@ -84,7 +84,7 @@ public class GestionarCompres {
 	}
 
 	private void ReadClientFromTxt(){
-		String nomRegistro = "/home/adria/Escritorio/Practiques ES GIT/PractiquesES/ES_2013_PracticaCT/src/org/uab/etse/es/ES00/clients.txt";
+		String nomRegistro = Constantes.RutaClient;
 		FileReader fr;
 		BufferedReader ficheroRegistro;
 		try {
@@ -96,7 +96,7 @@ public class GestionarCompres {
 			}
 			ficheroRegistro.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			// 
 			e.printStackTrace();
 		}
 	}

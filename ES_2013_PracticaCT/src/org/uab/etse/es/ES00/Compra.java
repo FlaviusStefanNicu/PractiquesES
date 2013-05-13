@@ -96,7 +96,9 @@ public class Compra {
 	}
 	public boolean AfegirProducteCarro(String idLineaCompra, int unitats){			
 		LiniaCompra auxLinia = new LiniaCompra(unitats, idLineaCompra);
-		if (auxLinia.getProducte().getUnitats() >= unitats){ //REVISARR!!!falta implementar els metodes
+		auxLinia.setCompra(this);
+		Producte produc = auxLinia.getProducte();
+		if (produc.getUnitats() >= unitats){ //REVISARR!!!falta implementar els metodes
 			addLiniaCompra(auxLinia);	
 			return true;
 		}else
@@ -106,14 +108,15 @@ public class Compra {
 	private float PreuTotal(){
 		float preuTotal = 0;
 		for (int i=0; i<liniaCompraSize();i++){
-			preuTotal += liniaCompraToArray()[i].GetPreu(); 
+			LiniaCompra prod = liniaCompraToArray()[i];
+			preuTotal += prod.GetPreu(); 
 		} 
 		return preuTotal;
 	}
 
 	private void RegistrarLiniaCompraTxt( String IdProd, String NomProd, int LiniaUnitats, float liniaPreu){
 		// Registrar compra
-		String nomRegistro = "/home/adria/Escritorio/Practiques ES GIT/PractiquesES/ES_2013_PracticaCT/src/org/uab/etse/es/ES00/registro.txt";
+		String nomRegistro = Constantes.RutaRegistros;
 
 		FileWriter fr;
 		BufferedWriter ficheroRegistro;
@@ -125,14 +128,14 @@ public class Compra {
 			ficheroRegistro.append(sCadena);
 			ficheroRegistro.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}				
 	}
 
 	private void RegistrarCompraTxt( String idCompra, String clientNom, float preu){
 		// Registrar compra
-		String nomRegistro = "registro.txt";
+		String nomRegistro = Constantes.RutaRegistros;
 		FileWriter fr;
 		BufferedWriter ficheroRegistro;
 		try {
@@ -143,8 +146,7 @@ public class Compra {
 			ficheroRegistro.append(sCadena);
 			ficheroRegistro.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+					e.printStackTrace();
 		}				
 	}
 
@@ -169,7 +171,7 @@ public class Compra {
 
 	public Compra() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 		this.liniaCompra = new ArrayList<LiniaCompra>();
 		this.saldo = 0;
 		this.idCompra = "";

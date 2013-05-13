@@ -38,7 +38,7 @@ public class Cataleg {
 			}
 			ficheroRegistro.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 	}
@@ -47,10 +47,10 @@ public class Cataleg {
 		Producte auxProd = new Producte();
 		String[] ProdDades = sCadena.split("-");
 		// Update values
-		auxProd.setNombre(ProdDades[0]);
-		auxProd.setIdProducte(ProdDades[1]);
-		auxProd.setUnitats(Integer.parseInt(ProdDades[2]));
-		auxProd.setCost(Float.valueOf(ProdDades[3]).floatValue());
+		auxProd.setNombre(ProdDades[1]);
+		auxProd.setIdProducte(ProdDades[0]);
+		auxProd.setCost(Float.valueOf(ProdDades[2]).floatValue());
+		auxProd.setUnitats(Integer.parseInt(ProdDades[3]));
 		auxProd.setStockOptim(Integer.parseInt(ProdDades[4]));
 		auxProd.setStockMinim(Integer.parseInt(ProdDades[5]));
 		auxProd.setDescripcio(ProdDades[6]);
@@ -115,11 +115,11 @@ public class Cataleg {
 		try {
 			fr = new FileWriter(new File(StorageFilename()), true);
 			ficheroRegistro = new BufferedWriter(fr);
-			String sCadena = nombreProd.toString() + "-" + idProd.toString()+ "-" + unistatsProd + "-" + costProd + "-" + stockOptimProd + "-" + stockMinimProd + "-" + descrpcio.toString();
+			String sCadena =  idProd.toString() + "-" + nombreProd.toString()+ "-" + unistatsProd + "-" + costProd + "-" + stockOptimProd + "-" + stockMinimProd + "-" + descrpcio.toString();
 			ficheroRegistro.append(sCadena);
 			ficheroRegistro.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 	}
@@ -135,14 +135,17 @@ public class Cataleg {
 	/** 
 	 * Get product
 	 */
-	private Producte GetProd(String idProd){
+	public Producte GetProd(String idProd){
 
 		int pos = 0;
-		while ((pos<producteSize())&&(!(producteToArray()[pos].getIdProducte().equals(idProd)))){ // Mientras no llegue al final Y el producto de la posicion "pos" no sea el buscado
+		int size = producteToArray().length;
+		Producte producte = producteToArray()[pos];
+		while ((pos<size)&&(!(producte.getIdProducte().equals(idProd)))){ // Mientras no llegue al final Y el producto de la posicion "pos" no sea el buscado
 			pos++;
+			producte = producteToArray()[pos];
 		}
-		if ((pos!=producteSize()) && (producteToArray()[pos].getIdProducte().equals(idProd)))
-			return producteToArray()[pos];
+		if ((pos!=size) && (producteToArray()[pos].getIdProducte().equals(idProd)))
+			return producte;
 		else 
 			return null;
 	}
@@ -169,12 +172,12 @@ public class Cataleg {
 
 	public Cataleg() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 		producte = new ArrayList<Producte>();
 
 	}
 
 	protected String StorageFilename(){
-		return "/home/adria/Escritorio/Practiques ES GIT/PractiquesES/ES_2013_PracticaCT/src/org/uab/etse/es/ES00/productes.txt";
+		return Constantes.RutaProductes;
 	}
 }

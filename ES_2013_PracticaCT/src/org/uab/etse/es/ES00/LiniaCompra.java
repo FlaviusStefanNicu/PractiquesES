@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -24,6 +25,10 @@ public class LiniaCompra {
 		super();
 		this.unitat = unitats;
 		this.IDLinea = idLineaCompra;
+		this.producte = main.gestion.getCataleg().GetProd(idLineaCompra);
+		
+				
+		
 	}
 	public Producte getProducte() {
 		return this.producte;
@@ -60,6 +65,6 @@ public class LiniaCompra {
 	
 
 	public float GetPreu(){
-		return 0;
+		return unitat * producte.getCost();
 	}
 }

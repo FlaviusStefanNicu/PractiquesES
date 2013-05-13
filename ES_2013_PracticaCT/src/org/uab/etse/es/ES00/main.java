@@ -15,7 +15,7 @@ import org.uab.etse.es.ES00.GestionarCompres;
 
 public class main {
 	
-	private static GestionarCompres gestion;
+	public static GestionarCompres gestion;
 
 	private static void MostrarCatalog(Collection<Producte> prods){
 		System.out.println("Id  Nombre  Cost  Unitats  StockOptim  StockMinim  Descripcio\n");
@@ -32,7 +32,7 @@ public class main {
 		try {
 			idClient = teclado.readLine().toString();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		System.out.println("Password: \n");
@@ -40,7 +40,7 @@ public class main {
 		try {
 			password = teclado.readLine().toString();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		if (gestion.RegistrarClient(idClient, password))
@@ -71,10 +71,10 @@ public class main {
 					System.out.println("Error: dades del producte o del client erronis");
 		
 			} catch (NumberFormatException e) {
-				// TODO Auto-generated catch block
+			
 				e.printStackTrace();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 			
@@ -100,7 +100,7 @@ public class main {
 		try {
 			idClient = teclado.readLine().toString();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		System.out.println("Password: \n");
@@ -108,7 +108,7 @@ public class main {
 		try {
 			password = teclado.readLine().toString();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		if (gestion.Desconnectar(idClient, password))
@@ -135,7 +135,7 @@ public class main {
 	 * @throws IOException 
 	 */	
 	public static void main(String[] args){
-		// TODO Auto-generated method stub
+		
 		PrintMenu();
 		//char inOpcio = System.in.read();//Integer.parseInt(System.in.toString());
 		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
@@ -145,10 +145,10 @@ public class main {
 			try {
 				opcio = Integer.parseInt(teclado.readLine());
 			} catch (NumberFormatException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 			
@@ -163,7 +163,8 @@ public class main {
 					  	break;	
 				case 5: MostrarStock();
 					  	break;
-				case 6: 
+				case 6: DesconectarClient();
+						break;
 				default:
 					System.out.println("Opcio no valida");
 			}	
