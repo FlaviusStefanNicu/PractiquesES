@@ -4,15 +4,6 @@
 
 package org.uab.etse.es.ES00;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 
 
 public class LiniaCompra {
@@ -25,10 +16,7 @@ public class LiniaCompra {
 		super();
 		this.unitat = unitats;
 		this.IDLinea = idLineaCompra;
-		this.producte = main.gestion.getCataleg().GetProd(idLineaCompra);
-		
-				
-		
+		this.producte = Main.gestion.getCataleg().GetProd(idLineaCompra);	
 	}
 	public Producte getProducte() {
 		return this.producte;
@@ -61,8 +49,6 @@ public class LiniaCompra {
 	public void setIdLineaCompra(String idLineaCompra) {
 		this.IDLinea = idLineaCompra;
 	}
-
-	
 
 	public float GetPreu(){
 		return unitat * producte.getCost();

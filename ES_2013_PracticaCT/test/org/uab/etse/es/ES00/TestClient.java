@@ -31,6 +31,11 @@ public class TestClient extends TestCase {
 		this.tclient = new Client(this.tidclient, this.tdni, this.tnom, this.tcognom, 
 				this.tpassword, this.ttelefon, this.tcomptebancari);
 	
+		testDefaultClient();
+		testFull();
+		testModifiers();
+		testIdentificar();
+		testCompra();
 	}
 
 	/** 

@@ -96,7 +96,7 @@ public class GestionarCompres {
 			}
 			ficheroRegistro.close();
 		} catch (IOException e) {
-			// 
+			
 			e.printStackTrace();
 		}
 	}
@@ -119,8 +119,9 @@ public class GestionarCompres {
 		int pos = 0;
 		boolean flag = clientToArray()[pos].Identificarse(IdClient, password);
 		while ((pos<getClient().size())&&(!(flag))){ // Mientras no llegue al final Y el producto de la posicion "pos" no sea el buscado
-			flag = clientToArray()[pos].Identificarse(IdClient, password);
 			pos++;
+			flag = clientToArray()[pos].Identificarse(IdClient, password);
+			
 		}
 		if (flag){
 			this.clientRegistrat =  clientToArray()[pos];
@@ -157,8 +158,8 @@ public class GestionarCompres {
 			compra.EliminarProducte(IdProd);
 	}
 
-	private void RegistrarCompra(String registro){
-	}
+	//private void RegistrarCompra(String registro){
+	//}
 
 	public int MostrarStockProductes(){
 		int aux = 0;

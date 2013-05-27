@@ -1,60 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<editmodel:SequenceDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="VendesEstabliment" size="864,489" metadata="uml2-1.0" initialized="true" tag="1000" key="32303037303533312D31303030205072616374697175657345532F4A65737573">
+<editmodel:SequenceDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="VendesEstabliment" size="864,489" metadata="uml2-1.0" initialized="true" tag="1000" key="32303037303533312D3130303020554D4C2F456C696573">
   <children xsi:type="editmodel:ActorEditModel" location="99,20" size="100,392" itemName="cajero">
-    <children xsi:type="editmodel:ActivationEditModel" location="42,108" size="16,50" sequenceItemContainer="//@children.0" length="50">
-      <sourceConnections xsi:type="editmodel:SequenceMessageEditModel" name="leerProducto" id="uab.es.practiques/Gestor#leerProducto()" source="//@children.0/@children.0" target="//@children.1/@children.0" targetEnd="//@children.0/@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual" associatedMethod="leerProducto(): Producto" associatedSequenceNumber="1">
-        <children xsi:type="editmodel:SequenceEndEditModel" anchorKind="FixedAtEdge" attachSource="true" userLabel="//@children.0/@children.0/@sourceConnections.0/@children.0/@children.0" methodLabel="//@children.0/@children.0/@sourceConnections.0/@children.0/@children.1" sequenceNumberLabel="//@children.0/@children.0/@sourceConnections.0/@children.0/@children.2" statementExpression="//@children.0/@children.0/@sourceConnections.0/@children.0/@children.3">
-          <children xsi:type="editmodel:MessageLabelEditModel" size="82,14" labelValue="anyadir producto"/>
-          <children xsi:type="editmodel:LabelEditModel" name="leerProducto(): Producto" size="118,14"/>
-          <children xsi:type="editmodel:LabelEditModel" name="1" size="6,14"/>
-          <children xsi:type="editmodel:MessageLabelEditModel" size="0,14"/>
-        </children>
-        <children xsi:type="editmodel:SequenceEndEditModel" anchorKind="FixedAtEdge" userLabel="//@children.0/@children.0/@sourceConnections.0/@children.1/@children.0" methodLabel="//@children.0/@children.0/@sourceConnections.0/@children.1/@children.1" sequenceNumberLabel="//@children.0/@children.0/@sourceConnections.0/@children.1/@children.2" statementExpression="//@children.0/@children.0/@sourceConnections.0/@children.1/@children.3">
-          <children xsi:type="editmodel:MessageLabelEditModel" size="0,14"/>
-          <children xsi:type="editmodel:LabelEditModel" size="0,14"/>
-          <children xsi:type="editmodel:LabelEditModel" size="0,14"/>
-          <children xsi:type="editmodel:MessageLabelEditModel" size="0,14"/>
-        </children>
-      </sourceConnections>
-    </children>
-    <children xsi:type="editmodel:ActivationEditModel" location="42,229" size="16,53" sequenceItemContainer="//@children.0" length="53">
-      <sourceConnections xsi:type="editmodel:SequenceMessageEditModel" name="GenerarFactura" id="uab.es.practiques/Gestor#GenerarFactura(Ljava.util.ArrayList;Luab.es.practiques.actores.Cajero;Luab.es.practiques.Gestor.EventoFinalFactura;)" source="//@children.0/@children.1" target="//@children.1/@children.1" targetEnd="//@children.0/@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@children.1/@sourceConnections.0/@children.0" connectionRouterKind="Manual" associatedMethod="GenerarFactura(ArrayList&lt;Producto>,Cajero,EventoFinalFactura)" associatedSequenceNumber="2">
-        <children xsi:type="editmodel:SequenceEndEditModel" anchorKind="FixedAtEdge" attachSource="true" userLabel="//@children.0/@children.1/@sourceConnections.0/@children.0/@children.0" methodLabel="//@children.0/@children.1/@sourceConnections.0/@children.0/@children.1" sequenceNumberLabel="//@children.0/@children.1/@sourceConnections.0/@children.0/@children.2" statementExpression="//@children.0/@children.1/@sourceConnections.0/@children.0/@children.3">
-          <children xsi:type="editmodel:MessageLabelEditModel" size="97,14" labelValue="generar una factura"/>
-          <children xsi:type="editmodel:LabelEditModel" name="GenerarFactura(ArrayList&lt;Producto>,Cajero,EventoFinalFactura)" size="314,14"/>
-          <children xsi:type="editmodel:LabelEditModel" name="2" size="6,14"/>
-          <children xsi:type="editmodel:MessageLabelEditModel" size="0,14"/>
-        </children>
-        <children xsi:type="editmodel:SequenceEndEditModel" anchorKind="FixedAtEdge" userLabel="//@children.0/@children.1/@sourceConnections.0/@children.1/@children.0" methodLabel="//@children.0/@children.1/@sourceConnections.0/@children.1/@children.1" sequenceNumberLabel="//@children.0/@children.1/@sourceConnections.0/@children.1/@children.2" statementExpression="//@children.0/@children.1/@sourceConnections.0/@children.1/@children.3">
-          <children xsi:type="editmodel:MessageLabelEditModel" size="0,14"/>
-          <children xsi:type="editmodel:LabelEditModel" size="0,14"/>
-          <children xsi:type="editmodel:LabelEditModel" size="0,14"/>
-          <children xsi:type="editmodel:MessageLabelEditModel" size="0,14"/>
-        </children>
-      </sourceConnections>
-    </children>
-  </children>
-  <children xsi:type="editmodel:InstanceEditModel" name="Gestor" location="340,20" size="121,392" id="uab.es.practiques/Gestor" itemName="gestor">
-    <children xsi:type="editmodel:ActivationEditModel" targetConnections="//@children.0/@children.0/@sourceConnections.0" location="52,108" size="16,50" sequenceItemContainer="//@children.1" length="50"/>
-    <children xsi:type="editmodel:ActivationEditModel" targetConnections="//@children.0/@children.1/@sourceConnections.0" location="52,229" size="16,53" sequenceItemContainer="//@children.1" length="53">
-      <sourceConnections xsi:type="editmodel:SequenceMessageEditModel" name="addFactura" id="uab.es.practiques/BBDD#addFactura(Luab.es.practiques.Factura;)" source="//@children.1/@children.1" target="//@children.2/@children.0" targetEnd="//@children.1/@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@children.1/@sourceConnections.0/@children.0" connectionRouterKind="Manual" associatedMethod="addFactura(Factura)" associatedSequenceNumber="2.1">
-        <children xsi:type="editmodel:SequenceEndEditModel" location="3,13" anchorKind="FixedAtEdge" attachSource="true" userLabel="//@children.1/@children.1/@sourceConnections.0/@children.0/@children.0" methodLabel="//@children.1/@children.1/@sourceConnections.0/@children.0/@children.1" sequenceNumberLabel="//@children.1/@children.1/@sourceConnections.0/@children.0/@children.2" statementExpression="//@children.1/@children.1/@sourceConnections.0/@children.0/@children.3">
-          <children xsi:type="editmodel:MessageLabelEditModel" size="28,14" labelValue="afegir"/>
-          <children xsi:type="editmodel:LabelEditModel" name="addFactura(Factura)" size="100,14"/>
-          <children xsi:type="editmodel:LabelEditModel" name="2.1" size="15,14"/>
-          <children xsi:type="editmodel:MessageLabelEditModel" size="0,14"/>
-        </children>
-        <children xsi:type="editmodel:SequenceEndEditModel" anchorKind="FixedAtEdge" userLabel="//@children.1/@children.1/@sourceConnections.0/@children.1/@children.0" methodLabel="//@children.1/@children.1/@sourceConnections.0/@children.1/@children.1" sequenceNumberLabel="//@children.1/@children.1/@sourceConnections.0/@children.1/@children.2" statementExpression="//@children.1/@children.1/@sourceConnections.0/@children.1/@children.3">
-          <children xsi:type="editmodel:MessageLabelEditModel" size="0,14"/>
-          <children xsi:type="editmodel:LabelEditModel" size="0,14"/>
-          <children xsi:type="editmodel:LabelEditModel" size="0,14"/>
-          <children xsi:type="editmodel:MessageLabelEditModel" size="0,14"/>
-        </children>
-      </sourceConnections>
-    </children>
-  </children>
-  <children xsi:type="editmodel:InstanceEditModel" name="BBDD" location="558,20" size="158,392" id="uab.es.practiques/BBDD" itemName="base de datos">
-    <children xsi:type="editmodel:ActivationEditModel" targetConnections="//@children.1/@children.1/@sourceConnections.0" location="71,242" size="16,40" sequenceItemContainer="//@children.2"/>
+    <children xsi:type="editmodel:ActivationEditModel" location="42,108" size="16,50" sequenceItemContainer="//@children.0" length="50"/>
+    <children xsi:type="editmodel:ActivationEditModel" location="42,229" size="16,53" sequenceItemContainer="//@children.0" length="53"/>
   </children>
   <children xsi:type="editmodel:FrameEditModel" location="60,120" size="110,60" type="loop">
     <children xsi:type="editmodel:FrameCompartmentEditModel" location="1,20" size="108,40" condition="si cinta llena"/>

@@ -152,7 +152,7 @@ public class Cataleg {
 
 	/** 
 	 * Get product position
-	 */
+	 *//**
 	private int GetProdPos(String idProd){
 		int pos = 0;
 		while ((pos<producteSize())&&(!(producteToArray()[pos].getIdProducte().equals(idProd)))){ // Mientras no llegue al final Y el producto de la posicion "pos" no sea el buscado

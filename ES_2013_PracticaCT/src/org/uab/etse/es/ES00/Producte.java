@@ -10,7 +10,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class Producte {
 
@@ -149,16 +148,6 @@ public class Producte {
 				pos++;					
 			} 
 
-			
-			
-			
-			//TODO  arreglar
-			
-			
-			
-			//ArrayList<Producte> list = (ArrayList<Producte>)main.gestion.getCataleg().getProducte();
-			
-			//writing
 
 			fr1 = new FileWriter(new File(nomRegistro));// for writing
 			ficheroRegistro1 = new BufferedWriter(fr1);
@@ -172,13 +161,9 @@ public class Producte {
 			}
 			ficheroRegistro1.append( getIdProducte().toString()+ "-" +getNombre().toString() + "-" +getCost()  + "-" + getUnitats() + "-" + getStockOptim() + "-" + getStockMinim() + "-" + getDescripcio().toString());
 			
-			//ficheroRegistro1.append( getIdProducte().toString()+ "-" +getNombre().toString() + "-" +getCost()  + "-" + getUnitats() + "-" + getStockOptim() + "-" + getStockMinim() + "-" + getDescripcio().toString());
-			//ficheroRegistro1.newLine();
-			
 			ficheroRegistro.close();
 			ficheroRegistro1.close();
 		} catch (IOException e) {
-			// 
 			e.printStackTrace();
 		}
 	}

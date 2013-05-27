@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<editmodel:SequenceDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="CompraOnline" size="864,489" metadata="uml2-1.0" initialized="true" tag="1000" key="32303037303533312D3130303020554D4C2F4A65737573">
-  <children xsi:type="editmodel:ActorEditModel" location="85,20" size="100,380" itemName="user">
-    <children xsi:type="editmodel:ActivationEditModel" location="42,120" size="16,40" sequenceItemContainer="//@children.0">
-      <sourceConnections xsi:type="editmodel:SequenceMessageEditModel" name="AnyadirProducto" id="uab.es.practiques.actores/Cliente#AnyadirProducto(Luab.es.practiques.Producto;)" source="//@children.0/@children.0" target="//@children.1/@children.0" targetEnd="//@children.0/@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual" associatedMethod="AnyadirProducto(Producto)" associatedSequenceNumber="1">
+<editmodel:SequenceDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="CompraOnline" size="1054,497" metadata="uml2-1.0" initialized="true" tag="1000" key="32303037303533312D3130303020554D4C2F456C696573">
+  <children xsi:type="editmodel:ActorEditModel" location="105,20" size="100,189" itemName="Client">
+    <children xsi:type="editmodel:ActivationEditModel" location="42,39" size="16,40" sequenceItemContainer="//@children.0">
+      <sourceConnections xsi:type="editmodel:SequenceMessageEditModel" source="//@children.0/@children.0" target="//@children.1/@children.0" targetEnd="//@children.0/@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual" associatedMethod="" associatedSequenceNumber="1">
         <children xsi:type="editmodel:SequenceEndEditModel" anchorKind="FixedAtEdge" attachSource="true" userLabel="//@children.0/@children.0/@sourceConnections.0/@children.0/@children.0" methodLabel="//@children.0/@children.0/@sourceConnections.0/@children.0/@children.1" sequenceNumberLabel="//@children.0/@children.0/@sourceConnections.0/@children.0/@children.2" statementExpression="//@children.0/@children.0/@sourceConnections.0/@children.0/@children.3">
-          <children xsi:type="editmodel:MessageLabelEditModel" size="76,14" labelValue="insertaProducte"/>
-          <children xsi:type="editmodel:LabelEditModel" name="AnyadirProducto(Producto)" size="132,14"/>
+          <children xsi:type="editmodel:MessageLabelEditModel" size="82,14" labelValue="ConsultarCataleg"/>
+          <children xsi:type="editmodel:LabelEditModel" size="0,14"/>
           <children xsi:type="editmodel:LabelEditModel" name="1" size="6,14"/>
           <children xsi:type="editmodel:MessageLabelEditModel" size="0,14"/>
         </children>
@@ -17,48 +17,14 @@
         </children>
       </sourceConnections>
     </children>
-    <children xsi:type="editmodel:ActivationEditModel" location="42,218" size="16,52" sequenceItemContainer="//@children.0" length="52">
-      <sourceConnections xsi:type="editmodel:SequenceMessageEditModel" name="GenerarFactura" id="uab.es.practiques/Gestor#GenerarFactura(Luab.es.practiques.actores.Cliente;Luab.es.practiques.Gestor.EventoFinalFactura;)" source="//@children.0/@children.1" target="//@children.2/@children.0" targetEnd="//@children.0/@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@children.1/@sourceConnections.0/@children.0" connectionRouterKind="Manual" associatedMethod="GenerarFactura(Cliente,EventoFinalFactura)" associatedSequenceNumber="2">
-        <children xsi:type="editmodel:SequenceEndEditModel" anchorKind="FixedAtEdge" attachSource="true" userLabel="//@children.0/@children.1/@sourceConnections.0/@children.0/@children.0" methodLabel="//@children.0/@children.1/@sourceConnections.0/@children.0/@children.1" sequenceNumberLabel="//@children.0/@children.1/@sourceConnections.0/@children.0/@children.2" statementExpression="//@children.0/@children.1/@sourceConnections.0/@children.0/@children.3">
-          <children xsi:type="editmodel:MessageLabelEditModel" size="0,14"/>
-          <children xsi:type="editmodel:LabelEditModel" name="GenerarFactura(Cliente,EventoFinalFactura)" size="212,14"/>
-          <children xsi:type="editmodel:LabelEditModel" name="2" size="6,14"/>
-          <children xsi:type="editmodel:MessageLabelEditModel" size="0,14"/>
-        </children>
-        <children xsi:type="editmodel:SequenceEndEditModel" anchorKind="FixedAtEdge" userLabel="//@children.0/@children.1/@sourceConnections.0/@children.1/@children.0" methodLabel="//@children.0/@children.1/@sourceConnections.0/@children.1/@children.1" sequenceNumberLabel="//@children.0/@children.1/@sourceConnections.0/@children.1/@children.2" statementExpression="//@children.0/@children.1/@sourceConnections.0/@children.1/@children.3">
-          <children xsi:type="editmodel:MessageLabelEditModel" size="0,14"/>
-          <children xsi:type="editmodel:LabelEditModel" size="0,14"/>
-          <children xsi:type="editmodel:LabelEditModel" size="0,14"/>
-          <children xsi:type="editmodel:MessageLabelEditModel" size="0,14"/>
-        </children>
-      </sourceConnections>
-    </children>
   </children>
-  <children xsi:type="editmodel:InstanceEditModel" name="Cliente" location="510,20" size="118,380" id="uab.es.practiques.actores/Cliente" itemName="client">
-    <children xsi:type="editmodel:ActivationEditModel" targetConnections="//@children.0/@children.0/@sourceConnections.0" location="51,120" size="16,40" sequenceItemContainer="//@children.1"/>
-    <children xsi:type="editmodel:ActivationEditModel" targetConnections="//@children.2/@children.0/@sourceConnections.0" location="51,230" size="16,40" sequenceItemContainer="//@children.1"/>
+  <children xsi:type="editmodel:InstanceEditModel" location="210,20" size="100,189" itemName="Interface">
+    <children xsi:type="editmodel:ActivationEditModel" targetConnections="//@children.0/@children.0/@sourceConnections.0" location="42,39" size="16,40" sequenceItemContainer="//@children.1"/>
   </children>
-  <children xsi:type="editmodel:InstanceEditModel" name="Gestor" location="285,20" size="121,380" id="uab.es.practiques/Gestor" itemName="gestor">
-    <children xsi:type="editmodel:ActivationEditModel" targetConnections="//@children.0/@children.1/@sourceConnections.0" location="52,218" size="16,52" sequenceItemContainer="//@children.2" length="52">
-      <sourceConnections xsi:type="editmodel:SequenceMessageEditModel" name="getCarroCompra" id="uab.es.practiques.actores/Cliente#getCarroCompra()" source="//@children.2/@children.0" target="//@children.1/@children.1" targetEnd="//@children.2/@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.2/@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual" associatedMethod="getCarroCompra(): ArrayList" associatedSequenceNumber="2.1">
-        <children xsi:type="editmodel:SequenceEndEditModel" location="3,12" anchorKind="FixedAtEdge" attachSource="true" userLabel="//@children.2/@children.0/@sourceConnections.0/@children.0/@children.0" methodLabel="//@children.2/@children.0/@sourceConnections.0/@children.0/@children.1" sequenceNumberLabel="//@children.2/@children.0/@sourceConnections.0/@children.0/@children.2" statementExpression="//@children.2/@children.0/@sourceConnections.0/@children.0/@children.3">
-          <children xsi:type="editmodel:MessageLabelEditModel" size="42,14" labelValue="getCarro"/>
-          <children xsi:type="editmodel:LabelEditModel" name="getCarroCompra(): ArrayList" size="137,14"/>
-          <children xsi:type="editmodel:LabelEditModel" name="2.1" size="15,14"/>
-          <children xsi:type="editmodel:MessageLabelEditModel" size="0,14"/>
-        </children>
-        <children xsi:type="editmodel:SequenceEndEditModel" anchorKind="FixedAtEdge" userLabel="//@children.2/@children.0/@sourceConnections.0/@children.1/@children.0" methodLabel="//@children.2/@children.0/@sourceConnections.0/@children.1/@children.1" sequenceNumberLabel="//@children.2/@children.0/@sourceConnections.0/@children.1/@children.2" statementExpression="//@children.2/@children.0/@sourceConnections.0/@children.1/@children.3">
-          <children xsi:type="editmodel:MessageLabelEditModel" size="0,14"/>
-          <children xsi:type="editmodel:LabelEditModel" size="0,14"/>
-          <children xsi:type="editmodel:LabelEditModel" size="0,14"/>
-          <children xsi:type="editmodel:MessageLabelEditModel" size="0,14"/>
-        </children>
-      </sourceConnections>
-    </children>
-  </children>
-  <children xsi:type="editmodel:FrameEditModel" location="30,135" size="110,60" type="loop">
-    <children xsi:type="editmodel:FrameCompartmentEditModel" location="1,20" size="108,40" condition="afegir productes"/>
-  </children>
+  <children xsi:type="editmodel:InstanceEditModel" location="330,20" size="100,189" itemName="Gestor"/>
+  <children xsi:type="editmodel:InstanceEditModel" location="435,20" size="100,189" itemName="Catàleg"/>
+  <children xsi:type="editmodel:InstanceEditModel" location="540,20" size="100,189" itemName="Carro"/>
+  <children xsi:type="editmodel:InstanceEditModel" location="600,20" size="100,189" itemName="Factura"/>
   <diagramOptions xsi:type="options:SequenceDiagramOptions" level="0" autoName="false"/>
   <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
     <leftRuler/>

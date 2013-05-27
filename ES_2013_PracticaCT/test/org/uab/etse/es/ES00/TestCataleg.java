@@ -10,20 +10,26 @@ import java.util.*;
 
 public class TestCataleg extends TestCase {
 
-	private final String catalegFilename = "catalegtest.txt";
-	private final String initialValues="";
+	private final String catalegFilename = ConstantesTests.RutaProductes;
+	//private final String initialValues="";
 	
-	private Vector names;
-	private Vector description;
-	private Vector prizes;
+	private Vector<String> names;
+	private Vector<String> description;
+	private Vector<Float> prizes;
 	
 	private void createInitialValues(){
-		names = new Vector();
-		description = new Vector();
-		prizes = new Vector();
-		names.add("TVPlasma32"); prizes.add(new Float(500.99f)); description.add("Televisió Plasma 32");
-		names.add("TVPlasma24"); prizes.add(new Float(199.99f)); description.add("Televisió Plasma 24");
-		names.add("TVPlasma50"); prizes.add(new Float(1450.99f)); description.add("Televisió Plasma 50");
+		names = new Vector<String>();
+		description = new Vector<String>();
+		prizes = new Vector<Float>();
+		names.add("TVPlasma32");
+		prizes.add(new Float(500.99f));
+		description.add("Televisió Plasma 32");
+		names.add("TVPlasma24");
+		prizes.add(new Float(199.99f));
+		description.add("Televisió Plasma 24");
+		names.add("TVPlasma50");
+		prizes.add(new Float(1450.99f));
+		description.add("Televisió Plasma 50");
 		
 	}
 	/** Mock Object to test, used to produce a controlled storage file*/
@@ -65,6 +71,7 @@ public class TestCataleg extends TestCase {
 		}
 		
 		tcataleg = new CatalegMock();
+		testAfegirProducte();
 	}
 
 	public void tearDown() throws Exception {
@@ -80,7 +87,7 @@ public class TestCataleg extends TestCase {
 		Collection<Producte> c = tcataleg.getProducte();
 		
 		assertTrue(c.size() == 3);
-		Iterator i = c.iterator();
+		Iterator<Producte> i = c.iterator();
 
 		testProducteIterator(i);
 	}
@@ -100,7 +107,7 @@ public class TestCataleg extends TestCase {
 	public final void testContainsProducte() {
 		Collection<Producte> c = tcataleg.getProducte();
 		
-		Iterator i = c.iterator();
+		Iterator<Producte> i = c.iterator();
 
 		while (i.hasNext()){
 			Producte p = (Producte)i.next();
@@ -129,8 +136,10 @@ public class TestCataleg extends TestCase {
 		assertTrue(tcataleg.containsProducte(p2));
 	}
 
-	public final void testSetProducte() {
-		fail("Not yet implemented");
+	public final void testSetProducte(String names, String description, float prizes) {
+		this.names.add(names);
+		this.description.add(description);
+		this.prizes.add(prizes);
 	}
 
 	public final void testRemoveProducte() {
@@ -147,7 +156,7 @@ public class TestCataleg extends TestCase {
         Collection<Producte> c = tcataleg.getProducte();
 		
 		assertTrue(c.size() == 3);
-		Iterator i = c.iterator();
+		Iterator<Producte> i = c.iterator();
 
 		testProducteIterator(i);
 	}
@@ -168,14 +177,14 @@ public class TestCataleg extends TestCase {
         Collection<Producte> c = tcataleg.getProducte();
 		
 		assertTrue(c.size() == 3);
-		Iterator i = c.iterator();
+		Iterator<Producte> i = c.iterator();
 		testProducteIterator(i);
 	}
 
 	public final void testModificarProducte() {
 		Collection<Producte> c = tcataleg.getProducte();
 		
-		Iterator i = c.iterator();
+		Iterator<Producte> i = c.iterator();
 
 		Producte p = (Producte)i.next();
 
@@ -194,14 +203,14 @@ public class TestCataleg extends TestCase {
 		testProducteIterator(i);
 }
 
-	public final void testEliminarProducte() {
+	public final void testEliminarProducte(String numero) {
 
-		assertTrue(tcataleg.EliminarProducte("001"));
+		assertTrue(tcataleg.EliminarProducte(numero));
 
 		assertTrue(tcataleg.producteSize() == 2);
 
 		Collection<Producte> c = tcataleg.getProducte();
-		Iterator i = c.iterator();
+		Iterator<Producte> i = c.iterator();
 
 		Producte p = (Producte)i.next();
 
@@ -220,7 +229,7 @@ public class TestCataleg extends TestCase {
 
 
 	/** Helper method for tests */
-	private void testProducteIterator(Iterator i) {
+	private void testProducteIterator(Iterator<Producte> i) {
 		int idx = 0;
 		while (i.hasNext()){
 			Producte p = (Producte)i.next();
