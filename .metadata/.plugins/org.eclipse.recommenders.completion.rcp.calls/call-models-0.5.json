@@ -1,0 +1,17 @@
+{
+  "/opt/jdk1.6.0_45/jre/lib/rt.jar": {
+    "location": "/opt/jdk1.6.0_45/jre/lib/rt.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027/opt/jdk1.6.0_45/jre/lib/rt.jar\u0027. Neither fingerprint \u0027501337d71f37329b1772f06adc5840706b3b70ef\u0027 nor symbolic name \u0027jre\u0027 are known."
+  },
+  "/home/adria/eclipse/plugins/org.junit_3.8.2.v3_8_2_v20100427-1100/junit.jar": {
+    "location": "/home/adria/eclipse/plugins/org.junit_3.8.2.v3_8_2_v20100427-1100/junit.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027/home/adria/eclipse/plugins/org.junit_3.8.2.v3_8_2_v20100427-1100/junit.jar\u0027. Neither fingerprint \u0027d066505750a09d6cc5ea8e78d4d26ab6cbf96a91\u0027 nor symbolic name \u0027junit\u0027 are known."
+  },
+  "/home/adria/Escritorio/PractiquesES/ES_2013_PracticaCT/src": {
+    "location": "/home/adria/Escritorio/PractiquesES/ES_2013_PracticaCT/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/home/adria/Escritorio/PractiquesES/ES_2013_PracticaCT/src\u0027. Skipped."
+  }
+}

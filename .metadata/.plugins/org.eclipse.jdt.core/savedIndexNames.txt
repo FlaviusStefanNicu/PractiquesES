@@ -1,0 +1,12 @@
+INDEX VERSION 1.126+/home/adria/Escritorio/PractiquesES/.metadata/.plugins/org.eclipse.jdt.core
+833104981.index
+925340128.index
+1681445365.index
+1188286728.index
+2757115588.index
+723748908.index
+36868677.index
+3970516929.index
+495168699.index
+72106309.index
+3376543670.index

@@ -1,0 +1,66 @@
+/**
+ * @author ES-2012.Practiques
+ */
+package org.uab.etse.es.ES00;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import junit.framework.TestCase;
+
+
+public class TestCompra extends TestCase {
+	private Compra tcompra;
+	
+	private Collection<LiniaCompra> liniaCompra = null;
+	private float saldo = 0;
+	private String idCompra = null;
+	private Client client = new org.uab.etse.es.ES00.Client();
+	
+	protected void setUp() throws Exception {
+		super.setUp();
+		liniaCompra = new ArrayList<LiniaCompra>();
+		client = new Client("1303441","47949587s","adria","berge","key","933470247","g832-fr43-cdt8-345t-342g");
+		
+		for(int i = 0; i != 10; i++){
+			LiniaCompra linea = new LiniaCompra(10+i, "4"+i);
+			linea.setProducte(new Producte("car"+i,"car_rojo",200,6500*i,220,50,"red car turbo diesel"+i));
+			liniaCompra.add(linea);
+		}
+		saldo = 6500*1 +6500 *2 +6500 *3 +6500*4 +6500*5 +6500*6 +6500*7 +6500*8 +6500*9;
+		idCompra = "test";
+		if(tcompra == null){
+			tcompra = new Compra();
+			tcompra.setClient(client);
+			tcompra.setIdCompra("test");
+		}
+	}
+	private void init(){
+		
+	}
+public final void testAddProducte(){
+	for(int i = 0; i != 10; i++){
+		LiniaCompra linea = new LiniaCompra(10+i, "4"+i);
+		linea.setProducte(new Producte("car"+i,"car_rojo",200,6500*i,220,50,"red car turbo diesel"+i));
+		tcompra.addLiniaCompra(linea);
+	}	
+	assertTrue(tcompra.getLiniaCompra().size() == liniaCompra.size());	
+	}
+public final void testDeleteProducte(){
+	tcompra.clearLiniaCompra();
+	assertTrue(tcompra.getLiniaCompra().size() == 0);
+}
+public final void testUser(){
+	assertTrue(tcompra.getClient().equals(client));
+}
+public final void testIdCompra(){
+	assertTrue(tcompra.getIdCompra().equals(idCompra));
+}
+public final void testSaldo(){
+	if(tcompra.getLiniaCompra().size() > 0){
+		assertTrue(tcompra.getSaldo() == saldo);
+	}else{
+		assertTrue(tcompra.getSaldo() == 0);
+	}
+}
+		
+}
