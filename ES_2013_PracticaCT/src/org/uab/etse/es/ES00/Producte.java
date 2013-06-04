@@ -1,5 +1,5 @@
 /**
- * @author ES-2012.Practiques
+  * @author ES-2012.Practiques
  */
 
 package org.uab.etse.es.ES00;
@@ -128,7 +128,7 @@ public class Producte {
 	}
 
 	private void UpdateProdTxt(){
-		String nomRegistro = Constantes.RutaProductes;
+		String nomRegistro = rutaFitxer();
 		FileReader fr;
 		BufferedReader ficheroRegistro;
 		FileWriter fr1;
@@ -168,9 +168,13 @@ public class Producte {
 		}
 	}
 
-	private String IdProdStr(String sCadena){
+	public String IdProdStr(String sCadena){
 		String[] ProdDades = sCadena.split("-");
 		return ProdDades[0];
 	}
-
+	
+	protected String rutaFitxer(){
+		return Constantes.RutaProductes;
+	}
+	
 }

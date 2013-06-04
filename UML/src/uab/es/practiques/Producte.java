@@ -1,6 +1,6 @@
 package uab.es.practiques;
 
-import java.util.Collection;
+
 
 public class Producte{
 
@@ -118,30 +118,6 @@ public class Producte{
 	 */
 	public void setCataleg(Cataleg cataleg) {
 		this.cataleg = cataleg;
-	}
-
-	/** 
-	 * @uml.property name="lineaCompra"
-	 * @uml.associationEnd multiplicity="(0 -1)" inverse="producte:uab.es.practiques.LineaCompra"
-	 */
-	private Collection<LineaCompra> lineaCompra;
-
-	/** 
-	 * Getter of the property <tt>lineaCompra</tt>
-	 * @return  Returns the lineaCompra.
-	 * @uml.property  name="lineaCompra"
-	 */
-	public Collection<LineaCompra> getLineaCompra() {
-		return lineaCompra;
-	}
-
-	/** 
-	 * Setter of the property <tt>lineaCompra</tt>
-	 * @param lineaCompra  The lineaCompra to set.
-	 * @uml.property  name="lineaCompra"
-	 */
-	public void setLineaCompra(Collection<LineaCompra> lineaCompra) {
-		this.lineaCompra = lineaCompra;
 	}
 
 

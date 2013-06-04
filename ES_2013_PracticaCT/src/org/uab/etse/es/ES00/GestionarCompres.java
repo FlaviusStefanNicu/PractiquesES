@@ -19,12 +19,21 @@ public class GestionarCompres {
 	private Collection<Client> clients;
 	private Client clientRegistrat;
 
+	private static GestionarCompres instance = null;
+
 	public Collection<Producte> ConsultarCatalog() {
 		return getCataleg().getProducte();
 	}
 
-
-	public GestionarCompres() {
+	public static GestionarCompres getInstancia(){
+		if(instance == null){
+			instance = new GestionarCompres();
+			return instance;
+		}else{
+			return instance;
+		}
+	}
+	private GestionarCompres() {
 		super();
 		cataleg = new Cataleg();
 		compra = new Compra();

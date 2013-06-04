@@ -1,10 +1,15 @@
 package org.uab.etse.es.ES00;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
 import junit.framework.TestCase;
 
 public class TestProducte extends TestCase {
 
-	private Producte tproducte = null;
+	private ProducteTest tproducte = null;
 	private final String nombre = "nom";
 	private final String idProducte ="55";
 	private final int unitats = 20;
@@ -13,11 +18,53 @@ public class TestProducte extends TestCase {
 	private final int stockMinim = 6;
 	private final String descripcio = "esto es una prova";
 	
+	private class ProducteTest extends Producte {
+		public ProducteTest(String nombre, String idProducte, int unitats, float cost, int stockOptim, int stockMinim, String descripcio) {
+			super(nombre, idProducte, unitats, cost, stockOptim, stockMinim, descripcio);
+		}
+
+		protected String rutaFitxer(){
+			return ConstantesTests.RutaProductes;
+		}
+		
+		@SuppressWarnings("finally")
+		private boolean comprobarUpdate(String id){
+			String nomRegistro = tproducte.rutaFitxer();
+			FileReader fReader;
+			BufferedReader bReader;
+			boolean comprobar = false;
+
+			try {
+				
+				fReader = new FileReader (new File(nomRegistro));
+				bReader = new BufferedReader(fReader);
+				String linea, idLinea = "";
+				
+				while ((linea = bReader.readLine())!=null && !comprobar) {
+					idLinea = tproducte.IdProdStr(linea);
+					
+					if (idLinea.equals(id)){
+						comprobar = true;
+					}
+				}
+				fReader.close();
+				bReader.close();
+				return comprobar;
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+				
+			}finally{
+				return comprobar;
+			}
+		}
+	}
+	
 	protected void setUp() throws Exception {
 		super.setUp();
-		if(this.tproducte == null){
-			this.tproducte = new Producte(this.nombre, this.idProducte, this.unitats, this.cost, this.stockOptim, this.stockMinim, this.descripcio);
-		}
+		
+		tproducte = new ProducteTest(this.nombre, this.idProducte, this.unitats, this.cost, this.stockOptim, this.stockMinim, this.descripcio);
+		
 	}
 
 	public final void testGetNombre() {
@@ -25,8 +72,9 @@ public class TestProducte extends TestCase {
 	}
 
 	public final void testSetNombre() {
-		this.tproducte.setNombre("");
-		assertTrue(this.tproducte.getNombre().equals(""));
+		this.tproducte.setNombre("producte");
+		assertTrue(this.tproducte.getNombre().equals("producte"));
+		assertTrue(this.tproducte.comprobarUpdate(tproducte.getIdProducte()));
 	}
 
 	public final void testGetIdProducte() {
@@ -34,8 +82,9 @@ public class TestProducte extends TestCase {
 	}
 
 	public final void testSetIdProducte() {
-		this.tproducte.setIdProducte("");
-		assertTrue(this.tproducte.getIdProducte().equals(""));
+		this.tproducte.setIdProducte("23");
+		assertTrue(this.tproducte.getIdProducte().equals("23"));
+		assertTrue(this.tproducte.comprobarUpdate(tproducte.getIdProducte()));
 	}
 
 	public final void testGetUnitats() {
@@ -46,7 +95,7 @@ public class TestProducte extends TestCase {
 		int n = 100;
 		this.tproducte.setUnitats(n);
 		assertTrue( this.tproducte.getUnitats() == n);
-		
+		assertTrue(this.tproducte.comprobarUpdate(tproducte.getIdProducte()));
 	}
 
 	public final void testGetCost() {
@@ -54,8 +103,9 @@ public class TestProducte extends TestCase {
 	}
 
 	public final void testSetCost() {
-		this.tproducte.setCost(0);
-		assertTrue(this.tproducte.getCost() == 0);
+		this.tproducte.setCost(10.5f);
+		assertTrue(this.tproducte.getCost() == 10.5);
+		assertTrue(this.tproducte.comprobarUpdate(tproducte.getIdProducte()));
 	}
 
 	public final void testGetStockOptim() {
@@ -63,8 +113,9 @@ public class TestProducte extends TestCase {
 	}
 
 	public final void testSetStockOptim() {
-		this.tproducte.setStockOptim(0);
-		assertTrue(this.tproducte.getStockOptim() == 0);
+		this.tproducte.setStockOptim(10);
+		assertTrue(this.tproducte.getStockOptim() == 10);
+		assertTrue(this.tproducte.comprobarUpdate(tproducte.getIdProducte()));
 	}
 
 	public final void testGetStockMinim() {
@@ -72,10 +123,31 @@ public class TestProducte extends TestCase {
 	}
 
 	public final void testSetStockMinim() {
-		this.tproducte.setStockMinim(0);
-		assertTrue(this.tproducte.getStockMinim() == 0);
+		this.tproducte.setStockMinim(15);
+		assertTrue(this.tproducte.getStockMinim() == 15);
+		assertTrue(this.tproducte.comprobarUpdate(tproducte.getIdProducte()));
 	}
 
+	public final void testGetDescripcio() {
+		assertTrue(this.tproducte.getDescripcio().equals(this.descripcio));
+	}
+
+	public final void testSetDescripcio() {
+		this.tproducte.setDescripcio("prova set");
+		assertTrue(this.tproducte.getDescripcio().equals("prova set"));
+		assertTrue(this.tproducte.comprobarUpdate(tproducte.getIdProducte()));
+	}
+
+	public final void testProducteStringStringIntFloatIntIntString() {
+		assertTrue(this.tproducte.getNombre() instanceof String);
+		assertTrue(this.tproducte.getIdProducte() instanceof String);		
+		assertTrue(isInteger(this.tproducte.getUnitats()));
+		assertTrue(isFloat(this.tproducte.getCost()));
+		assertTrue(isInteger(this.tproducte.getStockMinim()));
+		assertTrue(isInteger(this.tproducte.getStockOptim()));
+		assertTrue(this.tproducte.getDescripcio() instanceof String);		
+	}
+	
 	public final void testProducte() {
 		Producte tempproducte = new Producte(this.nombre, this.idProducte, this.unitats, this.cost, this.stockOptim, this.stockMinim, this.descripcio);
 		
@@ -89,17 +161,7 @@ public class TestProducte extends TestCase {
 		
 		assertTrue(n && d && i && u && c && sm && so);
 	}
-
-	public final void testProducteStringStringIntFloatIntIntString() {
-		assertTrue(this.tproducte.getNombre() instanceof String);
-		assertTrue(this.tproducte.getIdProducte() instanceof String);		
-		assertTrue(isInteger(this.tproducte.getUnitats()));
-		assertTrue(isFloat(this.tproducte.getCost()));
-		assertTrue(isInteger(this.tproducte.getStockMinim()));
-		assertTrue(isInteger(this.tproducte.getStockOptim()));
-		assertTrue(this.tproducte.getDescripcio() instanceof String);		
-		
-	}
+	
 	private boolean isInteger(int num){
 		try{
 		Integer.parseInt(num + "");
@@ -115,15 +177,6 @@ public class TestProducte extends TestCase {
 		}catch (Exception e) {
 			return false;
 		}
-	}
-
-	public final void testGetDescripcio() {
-		assertTrue(this.tproducte.getDescripcio().equals(this.descripcio));
-	}
-
-	public final void testSetDescripcio() {
-		this.tproducte.setDescripcio("");
-		assertTrue(this.tproducte.getDescripcio().equals(""));
 	}
 
 }

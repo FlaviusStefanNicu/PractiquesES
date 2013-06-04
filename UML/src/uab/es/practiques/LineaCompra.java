@@ -90,41 +90,17 @@ public class LineaCompra {
 					}
 
 					/** 
-					 * @uml.property name="carro"
-					 * @uml.associationEnd inverse="lineaCompra1:uab.es.practiques.Carro"
-					 */
-					private Carro carro;
-
-					/** 
-					 * Getter of the property <tt>carro</tt>
-					 * @return  Returns the carro.
-					 * @uml.property  name="carro"
-					 */
-					public Carro getCarro() {
-						return carro;
-					}
-
-					/** 
-					 * Setter of the property <tt>carro</tt>
-					 * @param carro  The carro to set.
-					 * @uml.property  name="carro"
-					 */
-					public void setCarro(Carro carro) {
-						this.carro = carro;
-					}
-
-					/** 
 					 * @uml.property name="producte"
-					 * @uml.associationEnd aggregation="composite" inverse="lineaCompra:uab.es.practiques.Producte"
+					 * @uml.associationEnd multiplicity="(1 1)" aggregation="composite" inverse="lineaCompra:uab.es.practiques.Producte"
 					 */
-					private Producte producte;
+					private int producte = 1;
 
 					/** 
 					 * Getter of the property <tt>producte</tt>
 					 * @return  Returns the producte.
 					 * @uml.property  name="producte"
 					 */
-					public Producte getProducte() {
+					public int getProducte() {
 						return producte;
 					}
 
@@ -133,8 +109,32 @@ public class LineaCompra {
 					 * @param producte  The producte to set.
 					 * @uml.property  name="producte"
 					 */
-					public void setProducte(Producte producte) {
+					public void setProducte(int producte) {
 						this.producte = producte;
+					}
+
+					/**
+					 * @uml.property  name="carro"
+					 * @uml.associationEnd  multiplicity="(1 1)" inverse="lineaCompra1:uab.es.practiques.Carro"
+					 */
+					private int carro = 1;
+
+					/**
+					 * Getter of the property <tt>carro</tt>
+					 * @return  Returns the carro.
+					 * @uml.property  name="carro"
+					 */
+					public int getCarro() {
+						return carro;
+					}
+
+					/**
+					 * Setter of the property <tt>carro</tt>
+					 * @param carro  The carro to set.
+					 * @uml.property  name="carro"
+					 */
+					public void setCarro(int carro) {
+						this.carro = carro;
 					}
 
 	

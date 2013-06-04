@@ -90,16 +90,6 @@ public class Carro {
 					return lineaCompra1;
 				}
 
-				/** 
-				 * Setter of the property <tt>lineaCompra1</tt>
-				 * @param lineaCompra1  The lineaCompra1 to set.
-				 * @uml.property  name="lineaCompra1"
-				 */
-				public void setLineaCompra1(Collection<LineaCompra> lineaCompra1) {
-					this.lineaCompra1 = lineaCompra1;
-				}
-
-
 				/**
 				 * @uml.property  name="compraID"
 				 */
@@ -121,6 +111,16 @@ public class Carro {
 				 */
 				public void setCompraID(String compraID) {
 					this.compraID = compraID;
+				}
+
+
+				/** 
+				 * Setter of the property <tt>lineaCompra1</tt>
+				 * @param lineaCompra1  The lineaCompra1 to set.
+				 * @uml.property  name="lineaCompra1"
+				 */
+				public void setLineaCompra1(Collection<LineaCompra> lineaCompra1) {
+					this.lineaCompra1 = lineaCompra1;
 				}
 
 	

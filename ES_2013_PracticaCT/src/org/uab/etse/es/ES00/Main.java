@@ -9,7 +9,7 @@ import org.uab.etse.es.ES00.GestionarCompres;
 
 public class Main {
 	
-	public static GestionarCompres gestion;
+	private static GestionarCompres gestion;
 
 	private static void MostrarCatalog(Collection<Producte> prods){
 		System.out.println("Id  Nombre  Cost  Unitats  StockOptim  StockMinim  Descripcio\n");
@@ -133,7 +133,7 @@ public class Main {
 		PrintMenu();
 		//char inOpcio = System.in.read();//Integer.parseInt(System.in.toString());
 		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
-		gestion = new GestionarCompres();
+		gestion = GestionarCompres.getInstancia();
 		int opcio = 0;
 		while (opcio!=7){
 			try {

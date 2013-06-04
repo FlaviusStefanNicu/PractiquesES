@@ -16,7 +16,7 @@ public class LiniaCompra {
 		super();
 		this.unitat = unitats;
 		this.IDLinea = idLineaCompra;
-		this.producte = Main.gestion.getCataleg().GetProd(idLineaCompra);	
+		this.producte = GestionarCompres.getInstancia().getCataleg().GetProd(idLineaCompra);	
 	}
 	public Producte getProducte() {
 		return this.producte;

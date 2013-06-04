@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="Supermercat" size="1669,594" id="uab.es.practiques" metadata="uml2-1.0" initialized="true" scrolledY="-5" tag="1000" key="32303037303533312D31303030205072616374697175657345532F466C6176697573">
-  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.0" name="Carro" location="480,375" size="182,124" id="uab.es.practiques/Carro" runTimeClassModel="EliminarLineaCompra(),ModificarLineaCompra(),AfegirLineaCompra(),compraID">
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="Supermercat" size="1669,594" id="uab.es.practiques" metadata="uml2-1.0" initialized="true" tag="1000" key="32303037303533312D31303030205072616374697175657345532F466C6176697573">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.0" name="Carro" location="521,420" size="182,124" id="uab.es.practiques/Carro" runTimeClassModel="EliminarLineaCompra(),ModificarLineaCompra(),AfegirLineaCompra(),compraID">
     <children xsi:type="editmodel:CompartmentEditModel" size="116,18">
       <children xsi:type="editmodel:AttributeEditModel" name="compraID" id="uab.es.practiques/Carro#compraID"/>
     </children>
@@ -10,20 +10,20 @@
       <children xsi:type="editmodel:MethodEditModel" name="ModificarLineaCompra" id="uab.es.practiques/Carro#ModificarLineaCompra()"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
-    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="uab.es.practiques/Factura@factura+uab.es.practiques/Carro@carro" source="//@children.0" target="//@children.2" targetEnd="//@children.0/@sourceConnections.0/@children.1" label="//@children.0/@sourceConnections.0/@children.2" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
-      <children xsi:type="editmodel:AssociationEndEditModel" name="carro" location="0,61" id="uab.es.practiques/Factura@factura+uab.es.practiques/Carro@carro|uab.es.practiques/Carro#carro" attachSource="true" multiplicityLabel="//@children.0/@sourceConnections.0/@children.0/@children.1" roleLabel="//@children.0/@sourceConnections.0/@children.0/@children.0" navigable="true">
-        <children xsi:type="editmodel:LabelEditModel" name=" - carro" location="432,413" size="41,16" anchorKind="FirstPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="451,443" size="22,16" anchorKind="FirstPart"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="uab.es.practiques/Carro@carro+uab.es.practiques/Factura@factura" source="//@children.0" target="//@children.2" targetEnd="//@children.0/@sourceConnections.0/@children.1" label="//@children.0/@sourceConnections.0/@children.2" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" name="carro" location="0,61" id="uab.es.practiques/Carro@carro+uab.es.practiques/Factura@factura|uab.es.practiques/Carro#carro" attachSource="true" multiplicityLabel="//@children.0/@sourceConnections.0/@children.0/@children.1" roleLabel="//@children.0/@sourceConnections.0/@children.0/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - carro" location="473,458" size="41,16" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="492,488" size="22,16" anchorKind="FirstPart"/>
       </children>
-      <children xsi:type="editmodel:AssociationEndEditModel" name="factura" location="139,76" id="uab.es.practiques/Factura@factura+uab.es.practiques/Carro@carro|uab.es.practiques/Factura#factura" multiplicityLabel="//@children.0/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.0/@sourceConnections.0/@children.1/@children.0" navigable="true">
-        <children xsi:type="editmodel:LabelEditModel" name=" - factura" location="326,413" size="51,16" anchorKind="LastPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="326,443" size="22,16" anchorKind="LastPart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="factura" location="139,76" id="uab.es.practiques/Carro@carro+uab.es.practiques/Factura@factura|uab.es.practiques/Factura#factura" multiplicityLabel="//@children.0/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.0/@sourceConnections.0/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - factura" location="367,458" size="51,16" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="367,488" size="22,16" anchorKind="LastPart"/>
       </children>
       <children xsi:type="editmodel:WireLabelEditModel" size="0,16" anchorKind="MiddlePart"/>
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.0" name="Cataleg" location="495,75" size="153,142" id="uab.es.practiques/Cataleg" runTimeClassModel="EliminarProducte(),AfegirProducte(),ConsultarCataleg(),ModificarCataleg(),data">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.0" name="Cataleg" location="536,120" size="153,142" id="uab.es.practiques/Cataleg" runTimeClassModel="AfegirProducte(),EliminarProducte(),ConsultarCataleg(),ModificarCataleg(),data">
     <children xsi:type="editmodel:CompartmentEditModel" size="86,18">
       <children xsi:type="editmodel:AttributeEditModel" name="data" id="uab.es.practiques/Cataleg#data"/>
     </children>
@@ -36,7 +36,7 @@
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.0/@sourceConnections.0 //@children.5/@sourceConnections.0" name="Factura" location="180,360" size="139,160" id="uab.es.practiques/Factura" runTimeClassModel="userID,Import,GenerarPDF(),compraID,data,VeureFactura()">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.0/@sourceConnections.0 //@children.5/@sourceConnections.0" name="Factura" location="221,405" size="139,160" id="uab.es.practiques/Factura" runTimeClassModel="userID,Import,GenerarPDF(),compraID,data,VeureFactura()">
     <children xsi:type="editmodel:CompartmentEditModel" size="116,72">
       <children xsi:type="editmodel:AttributeEditModel" name="Import" id="uab.es.practiques/Factura#Import"/>
       <children xsi:type="editmodel:AttributeEditModel" name="data" id="uab.es.practiques/Factura#data"/>
@@ -50,7 +50,7 @@
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.1" name="LineaCompra" location="889,360" size="151,142" id="uab.es.practiques/LineaCompra" runTimeClassModel="eliminarProducte(),afegirProducte(),preuProducte,quantitat,producteID">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.1" name="LineaCompra" location="930,405" size="151,142" id="uab.es.practiques/LineaCompra" runTimeClassModel="eliminarProducte(),afegirProducte(),preuProducte,quantitat,producteID">
     <children xsi:type="editmodel:CompartmentEditModel" size="128,54">
       <children xsi:type="editmodel:AttributeEditModel" name="preuProducte" id="uab.es.practiques/LineaCompra#preuProducte"/>
       <children xsi:type="editmodel:AttributeEditModel" name="producteID" id="uab.es.practiques/LineaCompra#producteID"/>
@@ -63,18 +63,18 @@
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="uab.es.practiques/Carro@carro+uab.es.practiques/LineaCompra@lineaCompra1" source="//@children.3" target="//@children.0" targetEnd="//@children.3/@sourceConnections.0/@children.1" label="//@children.3/@sourceConnections.0/@children.2" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
       <children xsi:type="editmodel:AssociationEndEditModel" name="lineaCompra1" location="0,77" id="uab.es.practiques/Carro@carro+uab.es.practiques/LineaCompra@lineaCompra1|uab.es.practiques/LineaCompra#lineaCompra1" attachSource="true" multiplicityLabel="//@children.3/@sourceConnections.0/@children.0/@children.1" roleLabel="//@children.3/@sourceConnections.0/@children.0/@children.0" aggregationKind="Aggregration" navigable="true">
-        <children xsi:type="editmodel:LabelEditModel" name=" - lineaCompra1" location="791,414" size="91,16" anchorKind="FirstPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="*" location="877,444" size="5,16" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name=" - lineaCompra1" location="832,459" size="91,16" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="918,489" size="5,16" anchorKind="FirstPart"/>
       </children>
       <children xsi:type="editmodel:AssociationEndEditModel" name="carro" location="182,62" id="uab.es.practiques/Carro@carro+uab.es.practiques/LineaCompra@lineaCompra1|uab.es.practiques/Carro#carro" multiplicityLabel="//@children.3/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.3/@sourceConnections.0/@children.1/@children.0" navigable="true">
-        <children xsi:type="editmodel:LabelEditModel" name=" - carro" location="669,414" size="41,16" anchorKind="LastPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="669,444" size="22,16" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name=" - carro" location="710,459" size="41,16" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="710,489" size="7,16" anchorKind="LastPart"/>
       </children>
       <children xsi:type="editmodel:WireLabelEditModel" size="0,16" anchorKind="MiddlePart"/>
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="Producte" location="893,120" size="143,114" id="uab.es.practiques/Producte" runTimeClassModel="stock,descripcio,ID,preu">
+  <children xsi:type="editmodel:ClassEditModel" name="Producte" location="934,165" size="143,114" id="uab.es.practiques/Producte" runTimeClassModel="stock,descripcio,ID,preu">
     <children xsi:type="editmodel:CompartmentEditModel" size="120,72">
       <children xsi:type="editmodel:AttributeEditModel" name="ID" id="uab.es.practiques/Producte#ID"/>
       <children xsi:type="editmodel:AttributeEditModel" name="descripcio" id="uab.es.practiques/Producte#descripcio"/>
@@ -85,24 +85,21 @@
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="uab.es.practiques/Producte@producte+uab.es.practiques/Cataleg@cataleg" source="//@children.4" target="//@children.1" targetEnd="//@children.4/@sourceConnections.0/@children.1" label="//@children.4/@sourceConnections.0/@children.2" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
       <children xsi:type="editmodel:AssociationEndEditModel" name="producte" location="0,48" id="uab.es.practiques/Producte@producte+uab.es.practiques/Cataleg@cataleg|uab.es.practiques/Producte#producte" attachSource="true" multiplicityLabel="//@children.4/@sourceConnections.0/@children.0/@children.1" roleLabel="//@children.4/@sourceConnections.0/@children.0/@children.0" aggregationKind="Composition" navigable="true" orderingKind="1">
-        <children xsi:type="editmodel:LabelEditModel" name=" - producte" location="824,145" size="62,16" anchorKind="FirstPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="*" location="881,175" size="5,16" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name=" - producte" location="865,190" size="62,16" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="922,220" size="5,16" anchorKind="FirstPart"/>
       </children>
       <children xsi:type="editmodel:AssociationEndEditModel" name="cataleg" location="153,93" id="uab.es.practiques/Producte@producte+uab.es.practiques/Cataleg@cataleg|uab.es.practiques/Cataleg#cataleg" multiplicityLabel="//@children.4/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.4/@sourceConnections.0/@children.1/@children.0" navigable="true">
-        <children xsi:type="editmodel:LabelEditModel" name=" - cataleg" location="655,145" size="54,16" anchorKind="LastPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="655,175" size="22,16" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name=" - cataleg" location="696,190" size="54,16" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="696,220" size="22,16" anchorKind="LastPart"/>
       </children>
       <children xsi:type="editmodel:WireLabelEditModel" size="0,16" anchorKind="MiddlePart"/>
     </sourceConnections>
-    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="uab.es.practiques/LineaCompra@lineaCompra+uab.es.practiques/Producte@producte" source="//@children.4" target="//@children.3" targetEnd="//@children.4/@sourceConnections.1/@children.1" label="//@children.4/@sourceConnections.1/@children.2" sourceEnd="//@children.4/@sourceConnections.1/@children.0" connectionRouterKind="Manhattan">
-      <children xsi:type="editmodel:AssociationEndEditModel" name="producte" location="71,114" id="uab.es.practiques/LineaCompra@lineaCompra+uab.es.practiques/Producte@producte|uab.es.practiques/Producte#producte" attachSource="true" multiplicityLabel="//@children.4/@sourceConnections.1/@children.0/@children.1" roleLabel="//@children.4/@sourceConnections.1/@children.0/@children.0" aggregationKind="Composition" navigable="true">
-        <children xsi:type="editmodel:LabelEditModel" name=" - producte" location="971,241" size="62,16" anchorKind="FirstPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="935,241" size="22,16" anchorKind="FirstPart"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="uab.es.practiques/Producte@producte+uab.es.practiques/LineaCompra@lineaCompra" source="//@children.4" target="//@children.3" targetEnd="//@children.4/@sourceConnections.1/@children.1" label="//@children.4/@sourceConnections.1/@children.2" sourceEnd="//@children.4/@sourceConnections.1/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" name="producte" location="71,114" id="uab.es.practiques/Producte@producte+uab.es.practiques/LineaCompra@lineaCompra|uab.es.practiques/Producte#producte" attachSource="true" multiplicityLabel="//@children.4/@sourceConnections.1/@children.0/@children.1" roleLabel="//@children.4/@sourceConnections.1/@children.0/@children.0" aggregationKind="Composition" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - producte" location="1012,286" size="62,16" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="991,286" size="7,16" anchorKind="FirstPart"/>
       </children>
-      <children xsi:type="editmodel:AssociationEndEditModel" name="lineaCompra" location="75,0" id="uab.es.practiques/LineaCompra@lineaCompra+uab.es.practiques/Producte@producte|uab.es.practiques/LineaCompra#lineaCompra" multiplicityLabel="//@children.4/@sourceConnections.1/@children.1/@children.1" roleLabel="//@children.4/@sourceConnections.1/@children.1/@children.0" navigable="true">
-        <children xsi:type="editmodel:LabelEditModel" name=" - lineaCompra" location="971,337" size="84,16" anchorKind="LastPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="*" location="952,337" size="5,16" anchorKind="LastPart"/>
-      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="lineaCompra" location="75,0" id="uab.es.practiques/Producte@producte+uab.es.practiques/LineaCompra@lineaCompra|uab.es.practiques/LineaCompra#lineaCompra"/>
       <children xsi:type="editmodel:WireLabelEditModel" size="0,16" anchorKind="MiddlePart"/>
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
@@ -126,13 +123,13 @@
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="uab.es.practiques/Factura@factura1+uab.es.practiques/User@user" source="//@children.5" target="//@children.2" targetEnd="//@children.5/@sourceConnections.0/@children.1" label="//@children.5/@sourceConnections.0/@children.2" sourceEnd="//@children.5/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
-      <children xsi:type="editmodel:AssociationEndEditModel" name="user" location="69,268" id="uab.es.practiques/Factura@factura1+uab.es.practiques/User@user|uab.es.practiques/User#user" attachSource="true" multiplicityLabel="//@children.5/@sourceConnections.0/@children.0/@children.1" roleLabel="//@children.5/@sourceConnections.0/@children.0/@children.0" navigable="true">
-        <children xsi:type="editmodel:LabelEditModel" name=" - user" location="256,275" size="37,16" anchorKind="FirstPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="220,275" size="22,16" anchorKind="FirstPart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="user" location="105,268" id="uab.es.practiques/Factura@factura1+uab.es.practiques/User@user|uab.es.practiques/User#user" attachSource="true" multiplicityLabel="//@children.5/@sourceConnections.0/@children.0/@children.1" roleLabel="//@children.5/@sourceConnections.0/@children.0/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" + user" location="292,275" size="41,16" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="256,275" size="22,16" anchorKind="FirstPart"/>
       </children>
-      <children xsi:type="editmodel:AssociationEndEditModel" name="factura1" location="69,0" id="uab.es.practiques/Factura@factura1+uab.es.practiques/User@user|uab.es.practiques/Factura#factura1" multiplicityLabel="//@children.5/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.5/@sourceConnections.0/@children.1/@children.0" navigable="true">
-        <children xsi:type="editmodel:LabelEditModel" name=" - factura1" location="256,337" size="58,16" anchorKind="LastPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="*" location="237,337" size="5,16" anchorKind="LastPart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="factura1" location="64,0" id="uab.es.practiques/Factura@factura1+uab.es.practiques/User@user|uab.es.practiques/Factura#factura1" multiplicityLabel="//@children.5/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.5/@sourceConnections.0/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - factura1" location="292,382" size="58,16" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="273,382" size="5,16" anchorKind="LastPart"/>
       </children>
       <children xsi:type="editmodel:WireLabelEditModel" size="0,16" anchorKind="MiddlePart"/>
     </sourceConnections>
